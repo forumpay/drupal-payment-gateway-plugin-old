@@ -1,0 +1,12 @@
+{
+    "name": "forumpay/forumpay-commerce-drupal",
+    "description": "ForumPay Commerce plugin for Drupal",
+    "type": "composer-plugin",
+    "license": "Apache-2.0",
+    "require": {
+        "forumpay/forumpay-commerce": "^1.0.0"
+    },
+    "config": {
+        "vendor-dir": "commerce_forumpay_payments/src/Forumpay"
+    }
+}

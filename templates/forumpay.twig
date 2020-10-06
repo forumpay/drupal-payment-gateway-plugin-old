@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ *
+ * Empty cart page template.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="forumpay-main">
+		<div class="forumpay-row forumpay-title">			
+    <select name="ChangeCurrency" onChange="getqrcode(this.value)">
+		<option value='0'>--Select Cryptocurrency--</option>		
+{foreach from=$currencylist item=item}		
+<option value='{$item['code']}'>{$item['desc']}</option>
+{/foreach}		
+    </select>
+</div>
+<div style="display: none" id="qr-img-div">			
+<div class="forumpay-row" >	
+		 <img src="" id="forumpay-qr-img" style="width: 50%">		
+</div>
+<div class="forumpay-row">
+  <snap id="forumpay-addr"></p>
+</div>	
+<div class="forumpay-row">
+  Amount : 
+  <snap id="forumpay-amt"> </p>
+</div>			
+</div>		
+
+<div class="forumpay-row " id='forumpay-payst-div' style="display: none">
+  Status : 
+  <snap id="forumpay-payst"> </p>
+</div>	
+
+<div class="forumpay-row" id='forumpay-err-div' style="display: none">
+  Error : 
+  <snap id="forumpay-err"> </p>
+</div>	
+		
+</div>		
+<div id="forumpay-loading" style="display: none">
+  <img id="forumpay-loading-image" src="{$basepath}/css/page-load.gif" alt="Loading..." />
+</div>	
