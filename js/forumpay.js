@@ -14,9 +14,13 @@ script.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(script);
 
 function forumpaygetrate(currency) {
-  if (currency == "0") return;
+  if (currency == "0") {
+    clearInterval(fpTimer);
+    $("#fp-details-div").hide();
+    return;
+  }
 
-  orcurrency = currency;
+  fpcurrency = currency;
   getqrurl = $("#forumpay-rateurl").attr("data");
   fporderid = $("#forumpay-orderid").attr("data");
 
@@ -57,10 +61,11 @@ function forumpaygetrate(currency) {
           timeerstar = "start";
           clearInterval(fpTimer);
           fpTimer = setInterval(function () {
-            forumpayratest(fpcurrency);
+            forumpaygetrate(fpcurrency);
           }, 5000);
         }
       } else {
+        $("#fp-details-div").hide();
         $("#forumpay-err-div").show();
         $("#forumpay-err").text(response_json.errmgs);
       }

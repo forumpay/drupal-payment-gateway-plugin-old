@@ -268,12 +268,13 @@ class ForumpayController extends ControllerBase
 </div>
 
 <div class="forumpay-row">
-<div class="forumpay-col1">Order No</div>
-<div class="forumpay-col2">' . $orderid . '</div>
+    <div class="forumpay-col1">Order No</div>
+    <div class="forumpay-col2">' . $orderid . '</div>
 </div>
+
 <div class="forumpay-row">
-<div class="forumpay-col1">' . t('Order amount') . '</div>
-<div class="forumpay-col2">' . $orderamt . '</div>
+    <div class="forumpay-col1">' . t('Order amount') . '</div>
+    <div class="forumpay-col2">' . $orderamt . '</div>
 </div>
 
 <div class="forumpay-row forumpay-title" id="forumpay-ccy-div">
@@ -283,62 +284,64 @@ class ForumpayController extends ControllerBase
 </div>
 
 <div class="fp-details" style="display: none" id="fp-details-div">
+    <details>
+        <summary>Details</summary>
 
-<div class="forumpay-rowsm">
-<div class="forumpay-col1">' . t('Rate') . ':</div>
-<div class="forumpay-col2">
-<snap id="forumpay-exrate"> </snap>
-</div>
-</div>
+        <div class="forumpay-rowsm">
+            <div class="forumpay-col1">' . t('Rate') . ':</div>
+            <div class="forumpay-col2">
+            <snap id="forumpay-exrate"> </snap>
+            </div>
+        </div>
 
-<div class="forumpay-rowsm">
-<div class="forumpay-col1">' . t('Exchange amount') . ':</div>
-<div class="forumpay-col2">
-<snap id="forumpay-examt"> </snap>
-</div>
-</div>
+        <div class="forumpay-rowsm">
+            <div class="forumpay-col1">' . t('Exchange amount') . ':</div>
+            <div class="forumpay-col2">
+            <snap id="forumpay-examt"> </snap>
+            </div>
+        </div>
 
-<div class="forumpay-rowsm">
-<div class="forumpay-col1">' . t('Network processing fee') . ':</div>
-<div class="forumpay-col2">
-<snap id="forumpay-netpfee"> </snap>
-</div>
-</div>
+        <div class="forumpay-rowsm">
+            <div class="forumpay-col1">' . t('Network processing fee') . ':</div>
+            <div class="forumpay-col2">
+            <snap id="forumpay-netpfee"> </snap>
+            </div>
+        </div>
+    </details>
 
-<div class="forumpay-row">
-<div class="forumpay-col1">' . t('Total') . ':</div>
-<div class="forumpay-col2">
-<snap id="forumpay-tot"> </snap>
-</div>
-</div>
+    <div class="forumpay-row">
+        <div class="forumpay-col1">' . t('Total') . ':</div>
+        <div class="forumpay-col2">
+        <snap id="forumpay-tot"> </snap>
+        </div>
+    </div>
 
-<div class="forumpay-rowsm" id="forumpay-wtime-div">
-<div class="forumpay-col1">' . t('Expected time to wait') . ':</div>
-<div class="forumpay-col2">
-<snap id="forumpay-waittime"> </snap>
-</div>
-</div>
+    <div class="forumpay-rowsm" id="forumpay-wtime-div">
+        <div class="forumpay-col1">' . t('Expected time to wait') . ':</div>
+        <div class="forumpay-col2">
+        <snap id="forumpay-waittime"> </snap>
+        </div>
+    </div>
 
-<div class="forumpay-rowsm" id="forumpay-txfee-div">
-<div class="forumpay-col1">' . t('TX fee set to') . ':</div>
-<div class="forumpay-col2">
-<snap id="forumpay-txfee"> </snap>
-</div>
-</div>
+    <div class="forumpay-rowsm" id="forumpay-txfee-div">
+        <div class="forumpay-col1">' . t('TX fee set to') . ':</div>
+        <div class="forumpay-col2">
+        <snap id="forumpay-txfee"> </snap>
+        </div>
+    </div>
 
-<div class="forumpay-row forumpay-qr" style="display: none" id="qr-img-div">
-		 <img src="" id="forumpay-qr-img" style="width: 50%">
-</div>
+    <div class="forumpay-row forumpay-qr" style="display: none" id="qr-img-div">
+            <img src="" id="forumpay-qr-img" style="width: 50%">
+    </div>
 
-<div class="forumpay-row forumpay-addr">
-  <snap id="forumpay-addr"></snap>
-</div>
+    <div class="forumpay-row forumpay-addr">
+    <snap id="forumpay-addr"></snap>
+    </div>
 
-<div class="forumpay-row forumpay-addr" id="forumpay-btn-div">
-  <button type="submit" id="forumpay-payment-btn" class="paybtn" style="width:90%;" onclick="forumpaygetqrcode()">
-Start payment</button>
-</div>
-
+    <div class="forumpay-row forumpay-addr" id="forumpay-btn-div">
+    <button type="submit" id="forumpay-payment-btn" class="paybtn" style="width:90%;" onclick="forumpaygetqrcode()">
+    Start payment</button>
+    </div>
 </div>
 
 <div class="forumpay-row forumpay-st" id="forumpay-payst-div" style="display: none">

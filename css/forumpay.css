@@ -7,7 +7,11 @@
   font-family: monospace;
 }
 .forumpay-title {
-  margin-left: 150px;
+  padding: 15px 0;
+  justify-content: center;
+}
+.forumpay-addr {
+  justify-content: center;
 }
 .forumpay-addr > snap {
   font-size: 15px;
@@ -22,6 +26,19 @@
 .fp-details {
   margin: 0px;
 }
+.fp-details details {
+  border: none;
+  font-size: 15px;
+  padding: 0 15px;
+}
+.fp-details details summary {
+  background: none;
+  color: inherit;
+  text-shadow: none;
+}
+.fp-details details .forumpay-rowsm:last-child > * {
+  margin-bottom: 20px;
+}
 .forumpay-row-pay {
   margin: 10px;
 }
@@ -35,6 +52,7 @@
   line-height: 20px;
   font-size: 20px;
   margin: 0px;
+  display: flex;
 }
 
 .forumpay-row > img {
@@ -48,19 +66,17 @@
   line-height: 20px;
   margin: 0px;
   font-size: 15px;
+  display: flex;
 }
 .forumpay-col1 {
-  float: left;
-  width: 40%;
   text-align: left;
   margin-left: 20px;
 }
 
 .forumpay-col2 {
-  float: right;
-  width: 40%;
   margin-right: 10px;
   text-align: right;
+  flex-grow: 1;
 }
 .forumpay-err {
   background-color: #ffdddd;
